@@ -6,6 +6,9 @@ import { uri } from './constant';
 
 const client = new ApolloClient({
     uri,
+    fetchOptions: {
+      mode: 'no-cors',
+    },
     cache: new InMemoryCache({
         typePolicies: {
           Query: {
