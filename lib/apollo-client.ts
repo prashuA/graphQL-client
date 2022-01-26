@@ -14,10 +14,7 @@ const client = new ApolloClient({
             },
           },
         },
-      }),
-      fetchOptions: {
-        mode: 'no-cors'
-      }
+      })
 });
 
 export default client;
