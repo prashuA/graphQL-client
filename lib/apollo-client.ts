@@ -6,9 +6,6 @@ import { uri } from './constant';
 
 const client = new ApolloClient({
     uri,
-    fetchOptions: {
-      mode: 'no-cors'
-    },
     cache: new InMemoryCache({
         typePolicies: {
           Query: {
@@ -17,7 +14,10 @@ const client = new ApolloClient({
             },
           },
         },
-      })
+      }),
+      fetchOptions: {
+        mode: 'no-cors'
+      }
 });
 
 export default client;
